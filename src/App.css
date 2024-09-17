@@ -1,0 +1,185 @@
+/* Container styling */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+}
+
+/* Main Title Styling */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Line graph section */
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+/* Table styling */
+.table-container {
+  margin-top: 20px;
+  overflow-x: auto; /* For mobile responsiveness */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Table header */
+table th {
+  background-color: #2980b9;
+  color: white;
+  padding: 15px;
+  text-align: left;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Sorting arrow */
+table th::after {
+  content: '▼';
+  font-size: 12px;
+  position: absolute;
+  right: 10px;
+  opacity: 0.5;
+  transform: rotate(0deg);
+  transition: transform 0.3s;
+}
+
+table th.active-asc::after {
+  content: '▲';
+  transform: rotate(180deg);
+}
+
+table th.active-desc::after {
+  content: '▼';
+  transform: rotate(0deg);
+}
+
+/* Table rows */
+table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.pagination button:hover {
+  background-color: #3498db;
+}
+
+/* Search input */
+.search-input {
+  display: block;
+  width: 50%;
+  margin: 10px auto 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Job Titles Section */
+.job-titles-container {
+  margin-top: 30px;
+}
+
+.job-titles-container h3 {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.job-titles-container table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+.job-titles-container th,
+.job-titles-container td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.job-titles-container th {
+  background-color: #16a085;
+  color: white;
+}
+
+.job-titles-container td {
+  background-color: #ecf0f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1, h2 {
+    font-size: 1.8rem;
+  }
+
+  .table-container {
+    overflow-x: scroll;
+  }
+
+  .search-input {
+    width: 90%;
+  }
+}
+
+/* Special Effects on Hover */
+table:hover {
+  transform: scale(1.01);
+}
+
+.pagination button:hover {
+  transform: scale(1.1);
+}
+
+table th:hover {
+  background-color: #1abc9c;
+}
